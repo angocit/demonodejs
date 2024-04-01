@@ -8,7 +8,7 @@ app.use('/api/v1',ProductRouter)
 app.use('/auth',AuthRouter)
 const connectDB = async()=>{
     try {
-        mongoose.connect(`mongodb://localhost:27017/productshop`)
+        await mongoose.connect(`mongodb://localhost:27017/productshop`)
         console.log(`Keets nối thành công`);
     } catch (error) {
         console.log(`Lỗi kết nối DB`);
